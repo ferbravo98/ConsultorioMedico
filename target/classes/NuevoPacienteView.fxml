@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="consultorio.NuevoPacienteController"
+      spacing="12"
+      alignment="TOP_CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Nuevo Paciente"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="DNI:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDni" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Apellido:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtApellido" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Nombre:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNombre" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Fecha Nacimiento:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dpFechaNacimiento" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Sexo:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cbSexo" prefWidth="250" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Domicilio:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDomicilio" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Obra Social:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtObraSocial" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="N° Afiliado:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNumeroAfiliado" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Observaciones:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <TextArea fx:id="txtObservaciones" prefRowCount="3" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Guardar" onAction="#onGuardar"/>
+        <Button text="Limpiar" onAction="#onLimpiar"/>
+        <Button text="Volver" onAction="#onVolver"/>
+    </HBox>
+
+</VBox>
