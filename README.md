@@ -14,6 +14,21 @@ Aplicación de escritorio desarrollada en JavaFX para la gestión de pacientes, 
 - Módulo de laboratorio / diagnóstico por imágenes
 - Conexión con base de datos MySQL
 
+## Capturas
+
+### Listado de pacientes
+![Pacientes](screenshots/Listado pacientes.png)
+
+### Nuevo paciente
+![Nuevo Paciente](screenshots/Nuevo Paciente.png)
+
+### Historia clínica
+![Historia Clínica](screenshots/Historia Clinica.png)
+
+### Estudios
+![Estudios](screenshots/Estudios.png)
+
+
 ## Tecnologías utilizadas
 
 - Java
