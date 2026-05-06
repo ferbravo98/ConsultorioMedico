@@ -17,16 +17,16 @@ Aplicación de escritorio desarrollada en JavaFX para la gestión de pacientes, 
 ## Capturas
 
 ### Listado de pacientes
-![Pacientes](screenshots/Listado pacientes.png)
+![Pacientes](screenshots/listado-pacientes.png)
 
 ### Nuevo paciente
-![Nuevo Paciente](screenshots/Nuevo Paciente.png)
+![Nuevo Paciente](screenshots/nuevo-paciente.png)
 
 ### Historia clínica
-![Historia Clínica](screenshots/Historia Clinica.png)
+![Historia Clínica](screenshots/historia-clinica.png)
 
 ### Estudios
-![Estudios](screenshots/Estudios.png)
+![Estudios](screenshots/estudios.png)
 
 
 ## Tecnologías utilizadas
