@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="consultorio.NuevaConsultaController"
+      spacing="12"
+      alignment="TOP_CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Nueva Consulta"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label fx:id="lblPaciente"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Fecha Consulta:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dpFechaConsulta" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Motivo:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextArea fx:id="txtMotivo" prefRowCount="2" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Diagnóstico:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextArea fx:id="txtDiagnostico" prefRowCount="2" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Tratamiento:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextArea fx:id="txtTratamiento" prefRowCount="2" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Observaciones:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextArea fx:id="txtObservaciones" prefRowCount="3" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Próximo Control:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dpProximoControl" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Guardar Consulta" onAction="#onGuardar"/>
+        <Button text="Volver" onAction="#onVolver"/>
+    </HBox>
+
+</VBox>

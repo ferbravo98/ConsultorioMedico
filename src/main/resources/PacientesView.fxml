@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="consultorio.PacientesController"
+      spacing="15"
+      alignment="CENTER"
+      prefWidth="900"
+      prefHeight="600">
+
+    <Label text="Listado de Pacientes"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10" alignment="CENTER">
+    <TextField fx:id="txtBuscar"
+               promptText="Buscar por DNI, apellido o nombre"
+               prefWidth="300"/>
+    <Button text="Buscar" onAction="#onBuscar"/>
+    <Button text="Mostrar todos" onAction="#onMostrarTodos"/>
+    <Button text="Nuevo paciente" onAction="#onNuevoPaciente"/>
+</HBox>
+
+    <TableView fx:id="tablaPacientes" prefWidth="800" prefHeight="450">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colDni" text="DNI" prefWidth="120"/>
+            <TableColumn fx:id="colApellido" text="Apellido" prefWidth="150"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="120"/>
+            <TableColumn fx:id="colObraSocial" text="Obra Social" prefWidth="180"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+    <Button text="Ver detalle" onAction="#onVerDetalle"/>
+    <Button text="Editar paciente" onAction="#onEditarPaciente"/>
+</HBox>
+
+</VBox>
