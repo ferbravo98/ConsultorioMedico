@@ -10,6 +10,8 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        InicializadorBD.inicializar();
+
         FXMLLoader loader = new FXMLLoader(
         getClass().getResource("/PacientesView.fxml")
     );

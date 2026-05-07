@@ -15,7 +15,7 @@ public class ConsultaDAO {
                 VALUES (?, ?, ?, ?, ?, ?, ?)
                 """;
 
-        try (Connection conn = ConexionMySQL.obtenerConexion();
+        try (Connection conn = ConexionSQLite.obtenerConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, consulta.getPacienteId());
@@ -42,7 +42,7 @@ public class ConsultaDAO {
         ORDER BY fecha_consulta DESC
     """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         ps.setInt(1, pacienteId);
@@ -81,7 +81,7 @@ public boolean actualizar(Consulta consulta) {
         WHERE id = ?
     """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         ps.setString(1, consulta.getFechaConsulta());

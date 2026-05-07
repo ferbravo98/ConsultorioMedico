@@ -18,7 +18,7 @@ public class PacienteDAO {
                 ORDER BY apellido, nombre
                 """;
 
-        try (Connection conn = ConexionMySQL.obtenerConexion();
+        try (Connection conn = ConexionSQLite.obtenerConexion();
              PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
 
@@ -54,7 +54,7 @@ public class PacienteDAO {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         ps.setString(1, paciente.getDni());
@@ -90,7 +90,7 @@ public class PacienteDAO {
             ORDER BY apellido, nombre
             """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         String filtro = "%" + texto + "%";
@@ -131,7 +131,7 @@ public boolean guardar(Paciente paciente) {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         ps.setString(1, paciente.getDni());
@@ -168,7 +168,7 @@ public boolean guardar(Paciente paciente) {
             WHERE id = ?
             """;
 
-    try (Connection conn = ConexionMySQL.obtenerConexion();
+    try (Connection conn = ConexionSQLite.obtenerConexion();
          PreparedStatement ps = conn.prepareStatement(sql)) {
 
         ps.setString(1, paciente.getDni());

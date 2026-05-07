@@ -60,7 +60,6 @@ public class NuevaConsultaController {
 
     @FXML
     private void onGuardar() {
-        System.out.println("Entró a onGuardar");
 
         if (paciente == null) {
             mostrarAlerta(Alert.AlertType.ERROR, "Error", "No hay paciente seleccionado.");

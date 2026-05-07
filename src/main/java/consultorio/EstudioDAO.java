@@ -13,7 +13,7 @@ public class EstudioDAO {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """;
 
-        try (Connection conn = ConexionMySQL.obtenerConexion();
+        try (Connection conn = ConexionSQLite.obtenerConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, estudio.getPacienteId());
@@ -49,7 +49,7 @@ public class EstudioDAO {
             ORDER BY fecha DESC
         """;
 
-        try (Connection conn = ConexionMySQL.obtenerConexion();
+        try (Connection conn = ConexionSQLite.obtenerConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, pacienteId);
@@ -95,7 +95,7 @@ public class EstudioDAO {
             WHERE id = ?
         """;
 
-        try (Connection conn = ConexionMySQL.obtenerConexion();
+        try (Connection conn = ConexionSQLite.obtenerConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, estudio.getFecha());
