@@ -113,4 +113,21 @@ private void onEstudios() {
         e.printStackTrace();
     }
 }
+@FXML
+private void onVacunacion() {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/VacunacionView.fxml"));
+        Scene scene = new Scene(loader.load(), 1000, 650);
+
+        VacunacionController controller = loader.getController();
+        controller.setPaciente(paciente);
+
+        Stage stage = (Stage) lblDni.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Vacunación");
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 }

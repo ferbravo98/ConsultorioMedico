@@ -53,6 +53,7 @@
     <Button text="Historia Clínica" onAction="#onHistoriaClinica"/>
     <Button text="Volver" onAction="#onVolver"/>
     <Button text="Estudios" onAction="#onEstudios"/>
+    <Button text="Vacunación" onAction="#onVacunacion"/>
     </HBox>
 
 </VBox>

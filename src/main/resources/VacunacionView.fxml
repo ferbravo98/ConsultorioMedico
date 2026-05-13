@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="consultorio.VacunacionController"
+      spacing="10"
+      alignment="CENTER"
+      prefWidth="1000"
+      prefHeight="650">
+
+    <Label fx:id="lblPaciente"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="tablaVacunas" prefWidth="950" prefHeight="520">
+        <columns>
+            <TableColumn fx:id="colEdad" text="Edad" prefWidth="120"/>
+            <TableColumn fx:id="colVacuna" text="Vacuna" prefWidth="230"/>
+            <TableColumn fx:id="colDosis" text="Dosis" prefWidth="150"/>
+            <TableColumn fx:id="colAplicada" text="Aplicada" prefWidth="100"/>
+            <TableColumn fx:id="colFecha" text="Fecha aplicación" prefWidth="150"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="130"/>
+            <TableColumn fx:id="colObservaciones" text="Observaciones" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Marcar / Editar" onAction="#onEditarVacuna"/>
+        <Button text="Volver" onAction="#onVolver"/>
+    </HBox>
+
+</VBox>
