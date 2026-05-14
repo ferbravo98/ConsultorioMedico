@@ -51,9 +51,9 @@
     <HBox spacing="10" alignment="CENTER">
     <Button text="Nueva consulta" onAction="#onNuevaConsulta"/>
     <Button text="Historia Clínica" onAction="#onHistoriaClinica"/>
-    <Button text="Volver" onAction="#onVolver"/>
     <Button text="Estudios" onAction="#onEstudios"/>
     <Button text="Vacunación" onAction="#onVacunacion"/>
+    <Button text="Volver" onAction="#onVolver"/>
     </HBox>
 
 </VBox>
