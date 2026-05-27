@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-//import javafx.scene.image.Image;
+import javafx.scene.image.Image;
 
 public class MainApp extends Application {
 
@@ -21,9 +21,9 @@ public class MainApp extends Application {
         getClass().getResource("/styles/app.css").toExternalForm()
     );
     stage.setTitle("Consultorio Médico");
-   // stage.getIcons().add(
-     //       new Image(getClass().getResourceAsStream("/img/logoApp.png"))
-    //);
+    stage.getIcons().add(
+        new Image(getClass().getResourceAsStream("/img/logoApp.png"))
+    );
 
     stage.setScene(scene);
     stage.show();
