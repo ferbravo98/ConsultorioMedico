@@ -112,7 +112,9 @@ public class EstudioFormController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/EstudiosView.fxml"));
             Scene scene = new Scene(loader.load(), 900, 600);
-
+            scene.getStylesheets().add(
+                getClass().getResource("/styles/app.css").toExternalForm()
+            );
             EstudiosController controller = loader.getController();
             controller.setPaciente(paciente);
 

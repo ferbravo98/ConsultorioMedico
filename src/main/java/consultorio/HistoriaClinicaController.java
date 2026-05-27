@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.TableRow;
 import javafx.stage.Stage;
 
 import java.util.List;
@@ -90,7 +89,9 @@ public class HistoriaClinicaController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/DetallePacienteView.fxml"));
             Scene scene = new Scene(loader.load(), 900, 600);
-
+            scene.getStylesheets().add(
+                getClass().getResource("/styles/app.css").toExternalForm()
+            );
             DetallePacienteController controller = loader.getController();
             controller.setPaciente(paciente);
 

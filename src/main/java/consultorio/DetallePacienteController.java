@@ -118,7 +118,9 @@ private void onVacunacion() {
     try {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/VacunacionView.fxml"));
         Scene scene = new Scene(loader.load(), 1000, 650);
-
+        scene.getStylesheets().add(
+            getClass().getResource("/styles/app.css").toExternalForm()
+        );
         VacunacionController controller = loader.getController();
         controller.setPaciente(paciente);
 

@@ -12,6 +12,8 @@ import javafx.scene.layout.VBox;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
+import javafx.stage.FileChooser;
+import java.io.File;
 
 public class VacunacionController {
 
@@ -178,7 +180,9 @@ public class VacunacionController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/DetallePacienteView.fxml"));
             Scene scene = new Scene(loader.load(), 900, 600);
-
+            scene.getStylesheets().add(
+                getClass().getResource("/styles/app.css").toExternalForm()
+            );
             DetallePacienteController controller = loader.getController();
             controller.setPaciente(paciente);
 
@@ -231,4 +235,36 @@ public class VacunacionController {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
+
+    @FXML
+    private void onExportarPdf() {
+        if (paciente == null) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Error", "No hay paciente seleccionado.");
+            return;
+        }
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Guardar carnet de vacunación");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Archivo PDF", "*.pdf")
+        );
+
+        String nombreSugerido = "carnet_vacunacion_" +
+                paciente.getApellido() + "_" +
+                paciente.getNombre() + ".pdf";
+
+        fileChooser.setInitialFileName(nombreSugerido.replace(" ", "_"));
+
+        Stage stage = (Stage) tablaVacunas.getScene().getWindow();
+        File archivo = fileChooser.showSaveDialog(stage);
+
+        if (archivo == null) {
+            return;
+        }
+
+        CarnetVacunacionPDF.generar(paciente, lista, archivo.getAbsolutePath());
+
+        mostrarAlerta(Alert.AlertType.INFORMATION, "PDF generado", "Carnet exportado correctamente.");
+    }
+
 }

@@ -136,7 +136,9 @@ if (pacienteEditar == null) {
     try {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/PacientesView.fxml"));
         Scene scene = new Scene(loader.load(), 900, 600);
-
+        scene.getStylesheets().add(
+        getClass().getResource("/styles/app.css").toExternalForm()
+        );
         Stage stage = (Stage) txtDni.getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Listado de Pacientes");

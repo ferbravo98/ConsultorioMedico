@@ -111,7 +111,9 @@ public class NuevaConsultaController {
     try {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/HistoriaClinicaView.fxml"));
         Scene scene = new Scene(loader.load(), 900, 600);
-
+        scene.getStylesheets().add(
+        getClass().getResource("/styles/app.css").toExternalForm()
+        );
         HistoriaClinicaController controller = loader.getController();
         controller.setPaciente(paciente);
 

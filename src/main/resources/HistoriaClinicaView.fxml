@@ -13,8 +13,7 @@
       prefWidth="900"
       prefHeight="600">
 
-    <Label fx:id="lblPaciente"
-           style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    <Label fx:id="lblPaciente" styleClass="subtitulo" />
 
     <TableView fx:id="tablaConsultas" prefHeight="500" prefWidth="850">
         <columns>

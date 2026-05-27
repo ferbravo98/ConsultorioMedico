@@ -17,6 +17,9 @@ public class MainApp extends Application {
     );
 
     Scene scene = new Scene(loader.load(), 1200, 800);
+    scene.getStylesheets().add(
+        getClass().getResource("/styles/app.css").toExternalForm()
+    );
     stage.setTitle("Consultorio Médico");
    // stage.getIcons().add(
      //       new Image(getClass().getResourceAsStream("/img/logoApp.png"))

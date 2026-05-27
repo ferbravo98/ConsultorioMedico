@@ -27,6 +27,7 @@
 
     <HBox spacing="10" alignment="CENTER">
         <Button text="Marcar / Editar" onAction="#onEditarVacuna"/>
+        <Button text="Exportar carnet PDF" onAction="#onExportarPdf"/>
         <Button text="Volver" onAction="#onVolver"/>
     </HBox>
 
