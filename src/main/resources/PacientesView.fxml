@@ -41,6 +41,7 @@
     <HBox spacing="10" alignment="CENTER">
     <Button text="Ver detalle" onAction="#onVerDetalle"/>
     <Button text="Editar paciente" onAction="#onEditarPaciente"/>
+    <Button text="Crear Backup" onAction="#onCrearBackup"/>
 </HBox>
 
 </VBox>

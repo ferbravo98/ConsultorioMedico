@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.io.IOException;
 
 import java.util.List;
 
@@ -207,6 +208,30 @@ private void onEditarPaciente() {
         stage.show();
 
     } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+ @FXML
+private void onCrearBackup() {
+
+    try {
+
+        String ruta = BackupManager.crearBackup();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Backup realizado");
+        alert.setHeaderText(null);
+        alert.setContentText("Backup creado correctamente:\n" + ruta);
+        alert.showAndWait();
+
+    } catch (IOException e) {
+
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText("No se pudo crear el backup.");
+        alert.showAndWait();
+
         e.printStackTrace();
     }
 }  
