@@ -4,15 +4,17 @@ Aplicación de escritorio desarrollada en JavaFX para la gestión de pacientes, 
 
 ## Funcionalidades
 
-- Alta, edición y búsqueda de pacientes
+- Gestión de pacientes
+- Edición de datos del paciente
 - Búsqueda en tiempo real
-- Vista de detalle del paciente
-- Registro de consultas médicas
-- Edición de consultas
-- Historia clínica por paciente
-- Registro de estudios solicitados
-- Módulo de laboratorio / diagnóstico por imágenes
-- Conexión con base de datos MySQL
+- Historia clínica
+- Registro y edición de consultas
+- Registro de estudios
+- Calendario de vacunación pediátrica
+- Exportación de carnet de vacunación en PDF
+- Sistema de backups
+- Base local SQLite
+- Ejecutable portable para Windows
 
 ## Capturas
 
@@ -36,6 +38,26 @@ Aplicación de escritorio desarrollada en JavaFX para la gestión de pacientes, 
 - Maven
 - MySQL
 - JDBC
+
+## Módulos del sistema
+
+### Gestión de Pacientes
+Permite registrar, editar y consultar pacientes. Incluye búsqueda en tiempo real por nombre, apellido o DNI.
+
+### Historia Clínica
+Permite almacenar consultas médicas, diagnósticos, tratamientos y observaciones.
+
+### Estudios Médicos
+Registro de estudios solicitados, resultados y observaciones asociadas al paciente.
+
+### Vacunación Pediátrica
+Control de vacunas aplicadas, pendientes y próximas según el calendario nacional argentino.
+
+### Exportación PDF
+Generación de carnet de vacunación en formato PDF para impresión o entrega digital.
+
+### Sistema de Backups
+Creación automática de copias de seguridad de la base SQLite para evitar pérdida de información.
 
 ## Ejecución del proyecto
 
